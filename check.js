@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// @flow
-
 'use strict';
 
 const spedFile = process.argv[2];
@@ -16,10 +14,10 @@ const lineReader = require('readline').createInterface({
 });
 
 let lineNumber = 0;
-let fieldCounts/*: {[reg: string]: number}*/;
+let fieldCounts;
 let hasErrors = false;
 
-lineReader.on('line', (line/*: string*/) => {
+lineReader.on('line', line => {
   lineNumber++;
 
   line = line.replace(/^\|/, '').replace(/\|$/, '');

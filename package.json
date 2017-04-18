@@ -10,7 +10,7 @@
     "node": ">=0.12"
   },
   "scripts": {
-    "test": "xo",
+    "test": "xo check.js",
     "prepublish": "npm test"
   },
   "repository": {
