@@ -25,7 +25,8 @@ lineReader.on('line', line => {
 
   if (lineNumber === 1) {
     const layout = /^\d{8}$/.test(values[3]) ? 'fiscal' : 'contrib';
-    fieldCounts = require(`./${layout}`);
+    const version = values[1];
+    fieldCounts = require(`./${layout}-${version}`);
   }
 
   const reg = values[0];
